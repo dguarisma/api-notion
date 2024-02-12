@@ -1,5 +1,4 @@
 import { Client, APIErrorCode } from '@notionhq/client'
-
 export async function POST(request) {
     try {
         const DATABASEID = '3773dc283ad44a31a952537fd3834bba';
@@ -31,5 +30,4 @@ export async function POST(request) {
             console.error(error)
         }
     }
-
 }

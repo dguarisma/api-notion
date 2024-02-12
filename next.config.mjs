@@ -1,4 +1,18 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
+const nextConfig = {
+    reactStrictMode: true,
+    swcMinify: true,
+    async headers() {
+        return [
+            {
+                source: "/api/:path*",
+                headers: [
+                    { key: "Access-Control-Allow-Credentials", value: "false" },
+                    { key: "Access-Control-Allow-Origin", value: "*" },
+                    { key: "Access-Control-Allow-Methods", value: "GET,DELETE,PATCH,POST,PUT" },
+                ]
+            }
+        ]
+    }
+}
 export default nextConfig;
