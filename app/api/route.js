@@ -1,6 +1,6 @@
 import { Client, APIErrorCode } from '@notionhq/client'
 
-export async function GET(request) {
+export async function POST(request) {
     try {
         console.log('request', request);
 
